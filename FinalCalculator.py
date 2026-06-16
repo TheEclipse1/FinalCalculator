@@ -245,7 +245,7 @@ else:
             m3.metric("Score Needed", f"{needed:.1f}%", get_letter_grade(needed))
 
         avg_info = (
-            f"📈 This would move your tests average: "
+            f" This would move your tests average: "
             f"**{cur_avg:.1f}%** → **{proj_avg:.1f}% ({get_letter_grade(proj_avg)})**"
         ) if 0 < needed <= 100 else None
 
