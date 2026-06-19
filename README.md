@@ -1,34 +1,28 @@
 # Final Grade Calculator
+# A Streamlit made website to tell you exactly what you need on your final to get the grade you want
+## Overview
+Final Grade Calculator uses your current grade and your target grade to figure out the exact score you need on your final. It supports two weighting modes and can optionally break your target down by question count so you know how many you can afford to miss.
+## How to Use this App
+Run the app and enter your current grade and the grade you want.
+Optionally enter the number of questions on your final to tell you how many questions you need to get right to pass.
+Then pick how your final is weighted; the app offers either
+* **Fixed weight** : the final is worth a set percentage of your total grade (e.g. 30%). Use the slider to set it.
+* **Tests category** : the final gets averaged in with your other test scores. Enter the category weight and your scores so far.
 
-Tells you what you need on your final to end up with the grade you want.
-
-## Setup
-
-bashpip install streamlit
+Hit Calculate and it tells you the score you need.
+## Tweaking
+# If you want to make something like this for a different grading structure
+1. Download the zip file
+2. Extract the contents
+3. Open your IDE
+4. Run
+```bash
+pip install -r requirements.txt
+```
+5. Adjust the letter grade scale in `get_letter_grade` if necessary
+6. To add a new weighting mode, add an option to the `final_type` radio and a matching calculation function
+7. To build run
+```bash
 streamlit run final_grade_calculator.py
-
-## How to use it
-
-Enter your current grade, your target grade, and optionally how many questions are on the final. Then pick how your final is weighted:
-
-
-Fixed weight — the final is worth a set percentage of your total grade (e.g. 30%). Use the slider to set it.
-Tests category — the final gets averaged in with your other test scores. You'll enter the category weight and your scores so far.
-
-
-### Hit calculate, and it tells you the score you need. If you entered a question count, it also tells you how many you can miss.
-
-## Math
-
-Fixed weight
-
-final_needed = (desired - current × (1 - w)) / w
-
-### Tests category
-
-other        = current - avg_tests × w_tests
-final_needed = (desired - other) / w_tests × (n + 1) - sum_tests
-
-Question count uses ceil so the result never rounds down into a failing score.
-
-
+```
+and you should have your own grade calculator! :)
