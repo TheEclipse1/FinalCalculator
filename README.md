@@ -1,7 +1,7 @@
 # Final Grade Calculator
 # A Streamlit made website to tell you exactly what you need on your final to get the grade you want
 ## Overview
-Final Grade Calculator uses your current grade and your target grade to figure out the exact score you need on your final. It supports two weighting modes and can optionally break your target down by question count so you know how many you can afford to miss.
+Final Grade Calculator uses your current grade and your target grade to figure out the exact score you need on your final. It has two weighting modes and can also show you how many you need to get right to get the grade you want.
 ## How to Use this App
 Run the app and enter your current grade and the grade you want.
 Optionally enter the number of questions on your final to tell you how many questions you need to get right to pass.
