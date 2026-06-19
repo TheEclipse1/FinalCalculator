@@ -19,8 +19,8 @@ Hit Calculate and it tells you the score you need.
 ```bash
 pip install -r requirements.txt
 ```
-5. Adjust the letter grade scale in `get_letter_grade` if necessary
-6. To add a new weighting mode, add an option to the `final_type` radio and a matching calculation function
+5. Adjust the letter grade scale in `letterGrade` if necessary
+6. To add a new weighting mode, add an option to the `finalType` radio and a matching calculation function
 7. To build run
 ```bash
 streamlit run final_grade_calculator.py
